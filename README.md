@@ -1,8 +1,6 @@
 # CS-4-Kidz
 A web app to help kids learn topics in computer science.
 
-# HELPFUL COMMANDS:
-
 # How to clone this repo:
 1. Click on the green "Clone or download" button on the right
 2. Copy web URL
