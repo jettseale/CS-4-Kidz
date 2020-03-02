@@ -1,11 +1,13 @@
-const express = require( 'express' );
-const bodyparser = require( 'body-parser' );
-const exphbrs = require( 'express-handlebars' );
-const mysql = require( 'mysql');
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
 
-const portOptions = {
-	hostname: 'localhost',
-	port: process.env.port || 3330
-};
+router.get('/',function(req,res){
+  res.sendFile(path.join(`${__dirname}/../public/index.html`));
+});
 
-var app = express();
+app.use('/', router);
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');
