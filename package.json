@@ -1,0 +1,24 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "This is our package.json",
+  "main": "/server/server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jettseale/CS-4-Kidz.git"
+  },
+  "author": "Matthew, Jett, Danmar, Scott, Juichi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jettseale/CS-4-Kidz/issues"
+  },
+  "homepage": "https://github.com/jettseale/CS-4-Kidz#readme"
+}
