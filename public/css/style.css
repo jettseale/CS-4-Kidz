@@ -1,4 +1,139 @@
+/* CSS based on work by ismailkrou at https://github.com/ismailkraou/simplelogin */
+
+* {
+	margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.citation {
+  color: rgb(248, 114, 248);
+}
+
+.citation:hover {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content:" ";
+	display:table;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+input {
+	border: none;
+	background: none;
+	margin-bottom: 45px;
+	padding:10px;
+	color: black;
+}
+
+/*****************************************/
+
 body {
-  background-color: red;
-  color: aqua;
+  /* background-color: #04DEAD; */
+  background-image: linear-gradient(to right, rgb(81, 236, 81), rgb(52, 173, 173));
+}
+
+.main-box {
+    margin: 100px auto;
+    background-color: #FBFAE1;
+    width: 450px;
+    border-radius: 4px;
+    padding-bottom: 30px;
+    box-shadow: 10px 10px 5px rgb(1, 75, 59);
+}
+
+.box-logo {
+	background-color: rgb(4, 88, 70);
+	color: #fff;
+	padding: 35px 170px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	box-shadow: 0px 3px 0px rgb(4, 88, 70);
+	margin-bottom: 45px;
+}
+
+.span1 {
+	position: relative;
+	float: left;
+	animation: animateleft 2s linear 1s infinite alternate;
+}
+.span2 {
+	position: relative;
+	float: right;
+	animation: animateright 2s linear 1s infinite alternate;
+}
+.box-form {
+	padding: 0 85px;
+}
+
+input[type="email"],
+input[type="password"] {
+	border-bottom: 2px solid rgb(248, 114, 248);
+	width: 100%;
+}
+
+.bg-check::before {
+	background: rgb(4, 88, 70);
+	height: 16px;
+	font-weight: bold;
+}
+
+input[type="submit"] {
+	padding: 16px 45px;
+	background: rgb(248, 114, 248);
+	color: #f1efb9;
+	border-radius: 4px;
+	margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgb(116, 115, 103);
+  text-shadow: 2px 2px 5px rgb(104, 16, 104);
+}
+
+input[type="submit"]:hover {
+  background: rgb(255, 35, 255);
+  color: rgb(238, 255, 0);
+  cursor: pointer;
+  box-shadow: 8px 8px 5px rgb(65, 64, 57);
+  text-shadow: 2px 2px 5px rgb(39, 6, 39);
+  width: 140px;
+  height: 50px;
+}
+
+a {
+	color: rgb(4, 88, 70);
+	font-weight: bold;
+}
+
+a:hover {
+  color: rgb(248, 114, 248);
+  text-shadow: 2px 2px 5px rgb(116, 115, 103);
+}
+
+/*************************/
+
+@keyframes animateleft {
+   from {margin-left: -180px; top: -10; left: 0;}
+    0%   {color: rgb(248, 114, 248); top: 0; left: 10px;}
+    50%  {color: rgb(238, 255, 0); top: 10px;left: 20px;}
+    100% {color: rgb(63, 222, 243);top: 20px;left: 40px;}
+    to {margin-left: 100px;top: 40px;left: 80px;}
+}
+
+@keyframes animateright {
+   from {margin-right: -180px;top: 10;right: 0px;}
+    0%  {color:  rgb(63, 222, 243); top: 0;right: 10px;}
+    50%  {color: rgb(248, 114, 248); top: -10px;right: 20px;}
+    100% {color: rgb(238, 255, 0);top: -20px;right: 40px;}
+    to {margin-right: 100px;top: -40px;right: 100px;}
 }
