@@ -1,1 +1,1 @@
-console.log('script.js says "I\'m here"');
+console.log("index.js is connected!\n");
