@@ -79,7 +79,8 @@ body {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="username"] {
 	border-bottom: 2px solid rgb(248, 114, 248);
 	width: 100%;
 }
