@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 
 app.get('*', (req, res) => {
+
     console.log(req.url);
   if (req.url === '/') res.sendFile(path.join(`${__dirname}/public/html/index.html`));
   else if (req.url === '/create-account') res.sendFile(path.join(`${__dirname}/public/html/create-account.html`));
@@ -22,3 +23,4 @@ app.post('*', function(req,res) {
 app.listen(process.env.port || 3000);
 
 console.log('Running at Port 3000');
+

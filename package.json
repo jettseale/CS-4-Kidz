@@ -2,19 +2,24 @@
   "name": "clear",
   "version": "1.0.0",
   "description": "This is our package.json",
-  "main": "/server/server.js",
+  "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "restart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jettseale/CS-4-Kidz.git"
   },
-  "author": "Matthew, Jett, Danmar, Scott, Juichi",
+  "author": "Matthew, Jett, Scott, Juichi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jettseale/CS-4-Kidz/issues"

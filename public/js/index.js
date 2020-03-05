@@ -5,3 +5,4 @@ function logSubmit(event){
 var form = document.getElementById('form');
 console.log(form);
 form.addEventListener('submit', logSubmit);
+
