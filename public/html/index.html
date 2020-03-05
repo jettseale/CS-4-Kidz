@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>CS 4Kidz Login</title>
-    <script type="text/javascript" src="index.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
     <div class="main-box">
@@ -20,7 +20,8 @@
         </div>
         <!--End Box-Logo-->
         <div class="box-form">
-            <form action="">
+            <form  id="form">
+
                 <input type="email" placeholder="Email">
                 <br>
                 <input type="password" placeholder="Password">
@@ -28,7 +29,12 @@
                 <input type="checkbox" class="bg-check" value="Remember me" text="yyyyyy"> Remember me
                 <br>
                 <center>
-                    <input type="submit" value="LOGIN">
+
+                    <input id= "login-button" type="submit" value="LOGIN">
+                    <br>
+                    <a href="create-account">Create Account</a>
+                    <br>
+
                     <br>
                     <a href="">I forgot my password!</a>
                 </center>
@@ -37,6 +43,10 @@
         <!--End Login-form-->
     </div>
     <!--End main-box-->
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
     <a href="https://github.com/ismailkraou/simplelogin" class="citation">UI provided by ismailkraou</a>
 </body>
 </html>
