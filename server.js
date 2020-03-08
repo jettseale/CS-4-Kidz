@@ -17,10 +17,12 @@ console.log(req.url);
   else if (req.url === '/index.js') res.sendFile(path.join(`${__dirname}/public/js/index.js`));
   else if (req.url === '/create.js') res.sendFile(path.join(`${__dirname}/public/js/create.js`));
   else if(req.url === '/forget-password') res.sendFile (path.join(`${__dirname}/public/html/forget-password.html`));
+  else if (req.url === '/email') res.sendFile(path.join(`${__dirname}/public/html/email.html`));
+  else if (req.url === '/email.js') res.sendFile(path.join(`${__dirname}/public/js/email.js`));
   else res.sendFile(path.join(`${__dirname}/public/html/404.html`));
 });
 
-app.post('*', function(req,res) {
+app.post('*', (req, res) => {
 
   if (req.url == '/create'){
     fs.readFile(path.join(`${__dirname}/public/email-data.json`), 'utf8',function(err,raw){
