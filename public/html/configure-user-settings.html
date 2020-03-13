@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	
   </head>
     <body>
       <div class="main-box">
@@ -10,19 +11,31 @@
         <h1 class="logo"> Customer Information: (Refresh Page For Results)</h1>
 
       <div class="email1">
-        Email:
-      </div>
-      <div id="email">
+        <strong>Email:</strong>
+		<div id="email">
 
+		</div>
       </div>
-      Username:
-      <div id="username">
+      <div>
+		  <strong>Username:</strong>
+		  <div id="username">
 
-      </div>
-      Password:
-      <div id="password">
+		  </div>
+	  </div>
+      <div>
+		  <strong>Encrypted Password:</strong>
+		  <div id="encryptedPassword">
+			
+		  </div>
+	  </div> 
+	  <br>
+      <div>
+		  <strong>Decrypted Password:</strong>
+		  <div id="decryptedPassword">
 
-      </div>
+		  </div>
+	  </div>
+
       <div class="buttons-to-exit">
       <a href="progress" class="button1">To Progress Page</a>
       <a href="index" class="button2">Logout</a>
@@ -30,6 +43,7 @@
     </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="aes.js" charset="utf-8" defer></script>
       <script type="text/javascript" src="configure-settings.js"></script>
       <link rel="stylesheet" href="style.css">
     </body>
