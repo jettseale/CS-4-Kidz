@@ -1,4 +1,64 @@
 /* CSS based on work by ismailkrou at https://github.com/ismailkraou/simplelogin */
+/* CSS Based on https://fdossena.com/?p=html5cool/buttons/i.frag*/
+.another-box {
+	padding: 30px;
+}
+
+.button2 {
+	padding-top: 50px;
+	padding-left: 200px;
+}
+
+.buttons-to-exit{
+padding: 10px;
+}
+
+.email1 {
+padding-top: 20px;
+}
+
+#password {
+padding: 10px 0px 10px 0px;
+}
+
+#username{
+padding: 10px 0px 10px 0px;
+}
+
+#email {
+	padding: 10px 0px 10px 0px;
+}
+
+a.button1{
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:0.1em solid #FFFFFF;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.12em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-align:center;
+ transition: all 0.2s;
+   padding-left: 200px;
+	 padding-bottom: 50px;
+}
+
+
+
+a.button1:hover{
+ color:#000000;
+ background-color:#FFFFFF;
+		padding-left: 200px;
+}
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+ }
+}
 
 * {
 	margin: 0;

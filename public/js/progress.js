@@ -9,11 +9,11 @@ window.onload = function () {
         },
         axisY:{
             title: "Grade %",
-            includeZero: false, 
+            includeZero: false,
             suffix: "%",
             maximum: 110
         },
-        data: [{        
+        data: [{
             type: "line",
             name: "Data Structures",
             yValueFormatString: "#0\"%\"",
@@ -29,7 +29,7 @@ window.onload = function () {
                 { label: "Saturday", y: 75 }
             ]
             },
-            {        
+            {
                 type: "line",
                 name: "Algorithms",
                 yValueFormatString: "#0\"%\"",
@@ -45,7 +45,7 @@ window.onload = function () {
                     { label: "Saturday", y: 96, indexLabel: "\u2191 Best score!", markerColor: "red", markerType: "triangle" }
                 ]
             },
-            {        
+            {
                 type: "line",
                 name: "Networking",
                 yValueFormatString: "#0\"%\"",
@@ -67,6 +67,6 @@ window.onload = function () {
 
     document.getElementsByClassName("back-to-settings")[0].addEventListener("click", () => {
         //PUT REDIRECT TO USER SETTINGS PAGE HERE
-        alert("Need to fill in redirect to user settings page");
+        window.location.href =  "http://localhost:3000/configure-user-settings";
     });
-}   
+}
