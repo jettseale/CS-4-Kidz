@@ -33,9 +33,14 @@ var count = 0;
     var thing = {};
 
 $.getJSON("./email-data.json", function(obj){
-    var countForObject = obj.length;
+	
+	var countForObject = obj.length;
     for (var i = 0; i < countForObject; i++){
-    if ( obj[i].email == form.elements[0].value && obj[i].password == form.elements[1].value )   {
+		
+		var decryptedPass = decrypt(obj[i].password, form.elements[0].value);
+		console.log(decryptedPass);
+    
+	if ( obj[i].email == form.elements[0].value && decryptedPass == form.elements[1].value )   {
       emailstring ="Email: " + obj[i].email;
       passstring = "Pass: " + obj[i].password;
       user = "Username: " + obj[i].username;
