@@ -1,4 +1,11 @@
 
+function loadFile(){
+
+window.location.href =  "http://localhost:3000/configure-user-settings";
+
+}
+
+
 function logSubmit(event){
 
   for (var i = 0; i <form.length - 2; i++ ){
@@ -7,26 +14,66 @@ function logSubmit(event){
 
 var count = 0;
 
-  $.getJSON("./email-data.json", function(obj){
+  var emailstring;
+  var passstring;
+  var username;
+
+  $.ajaxSetup({
+    async: false
+    });
+
+    var thing = {};
+
+$.getJSON("./email-data.json", function(obj){
     var countForObject = obj.length;
     for (var i = 0; i < countForObject; i++){
     if ( obj[i].email == form.elements[0].value && obj[i].password == form.elements[1].value )   {
-      var emailstring ="Email: " + obj[i].email;
-      var passstring = "Pass: " + obj[i].password;
-      var user = "Username: " + obj[i].username;
-      alert(emailstring + "\n" + passstring +  "\n" + user + "\n" + "Valid Credentials");
+      emailstring ="Email: " + obj[i].email;
+      passstring = "Pass: " + obj[i].password;
+      user = "Username: " + obj[i].username;
+      thing = {
+
+        "email" : obj[i].email,
+        "username": obj[i].username,
+        "password": obj[i].password
+
+      };
       count++;
       break;
     }
-    }
 
-    if (count == 0 ) {
-    alert("Not A Valid Email or Password");
-}
+    }
 
   });
 
-  event.preventDefault();
+  if (count == 0 ) {
+  alert("Not A Valid Email or Password");
+  window.location.href =  "http://localhost:3000";
+}
+
+  //addText.appenChild("Hello");
+if (count != 0){
+
+  var postreq = new XMLHttpRequest();
+
+  postreq.onreadystatechange = function() {
+
+    if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                        //loadPage(path.join(`${__dirname}/public/js/index.js`);
+                    }
+    if (this.readyState == XMLHttpRequest.DONE && this.status == 404) {
+                                            alert("Error Occurred");
+                    }
+
+  };
+                postreq.open('POST', 'login', true);
+                postreq.setRequestHeader('Content-Type', 'application/json');
+                postreq.send(JSON.stringify(thing));
+
+loadFile();
+}
+
+event.preventDefault();
 }
 
 var form = document.getElementById('form');
