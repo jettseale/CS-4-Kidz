@@ -29,7 +29,7 @@ function EncryptText(inputString, key) {
 	var txt1 = outputEncrypted.innerHTML;
 	var txt2 = outputDecrypted.innerHTML;
 	*/
-	alert("Encrypted password!");
+	alert(`Encrypted password!\nEntered password:${inputString}\nEncrypted password:${encrypted}`);
 	return encrypted;
 }
 
