@@ -1,3 +1,11 @@
+function decrypt(encrypted, key){
+
+	var decrypted = CryptoJS.AES.decrypt(encrypted, key);
+    var plainText = decrypted.toString(CryptoJS.enc.Utf8);
+	//outputDecrypted.innerHTML = plainText;
+
+	return plainText;
+}
 
 function loadFile(){
 

@@ -20,12 +20,16 @@ console.log(req.url);
   else if (req.url === '/file-info.json') res.sendFile(path.join(`${__dirname}/public/file-info.json`));
   else if (req.url === '/style.css') res.sendFile(path.join(`${__dirname}/public/css/style.css`));
   else if (req.url === '/index.js') res.sendFile(path.join(`${__dirname}/public/js/index.js`));
+  else if (req.url === '/aes.js') res.sendFile(path.join(`${__dirname}/rollups/aes.js`));
+  //else if (req.url === '/pbkdf2.js') res.sendFile(path.join(`${__dirname}/node_modules/crypto-js/pbkdf2.js`));
   else if (req.url === '/create.js') res.sendFile(path.join(`${__dirname}/public/js/create.js`));
-  else if(req.url === '/forget-password') res.sendFile (path.join(`${__dirname}/public/html/forget-password.html`));
+  else if (req.url === '/forget-password') res.sendFile (path.join(`${__dirname}/public/html/forget-password.html`));
   else if (req.url === '/email') res.sendFile(path.join(`${__dirname}/public/html/email.html`));
   else if (req.url === '/email.js') res.sendFile(path.join(`${__dirname}/public/js/email.js`));
   else if (req.url === '/configure-user-settings') res.sendFile(path.join(`${__dirname}/public/html/configure-user-settings.html`));
    else if (req.url === '/configure-settings.js') res.sendFile(path.join(`${__dirname}/public/js/configure-settings.js`));
+   else if (req.url === '/progress') res.sendFile(path.join(`${__dirname}/public/html/progress.html`));
+   else if (req.url === '/progress.js') res.sendFile(path.join(`${__dirname}/public/js/progress.js`));
   else res.sendFile(path.join(`${__dirname}/public/html/404.html`));
 });
 
