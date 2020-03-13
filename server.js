@@ -21,6 +21,8 @@ console.log(req.url);
   else if (req.url === '/forget-password') res.sendFile (path.join(`${__dirname}/public/html/forget-password.html`));
   else if (req.url === '/email') res.sendFile(path.join(`${__dirname}/public/html/email.html`));
   else if (req.url === '/email.js') res.sendFile(path.join(`${__dirname}/public/js/email.js`));
+  else if (req.url === '/progress') res.sendFile(path.join(`${__dirname}/public/html/progress.html`));
+  else if (req.url === '/progress.js') res.sendFile(path.join(`${__dirname}/public/js/progress.js`));
   else res.sendFile(path.join(`${__dirname}/public/html/404.html`));
 });
 
